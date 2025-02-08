@@ -1,4 +1,4 @@
-package crc641595e3f7c4d548a7;
+package crc646caf542a6f676917;
 
 
 public class MainActivity
@@ -11,7 +11,7 @@ public class MainActivity
 	static {
 		__md_methods = 
 			"";
-		mono.android.Runtime.register ("MauiAppKosmakovM.MainActivity, MauiAppKosmakovM", MainActivity.class, __md_methods);
+		mono.android.Runtime.register ("MauiAppSaltanov.MainActivity, MauiAppSaltanov", MainActivity.class, __md_methods);
 	}
 
 
@@ -19,7 +19,7 @@ public class MainActivity
 	{
 		super ();
 		if (getClass () == MainActivity.class) {
-			mono.android.TypeManager.Activate ("MauiAppKosmakovM.MainActivity, MauiAppKosmakovM", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("MauiAppSaltanov.MainActivity, MauiAppSaltanov", "", this, new java.lang.Object[] {  });
 		}
 	}
 
@@ -28,7 +28,7 @@ public class MainActivity
 	{
 		super (p0);
 		if (getClass () == MainActivity.class) {
-			mono.android.TypeManager.Activate ("MauiAppKosmakovM.MainActivity, MauiAppKosmakovM", "System.Int32, System.Private.CoreLib", this, new java.lang.Object[] { p0 });
+			mono.android.TypeManager.Activate ("MauiAppSaltanov.MainActivity, MauiAppSaltanov", "System.Int32, System.Private.CoreLib", this, new java.lang.Object[] { p0 });
 		}
 	}
 

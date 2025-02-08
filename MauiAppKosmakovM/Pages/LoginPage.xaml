@@ -25,21 +25,8 @@
                 <VerticalStackLayout>
                     <Entry x:Name="NameTb" Placeholder="Имя пользователя" />
 
+                    <Entry x:Name="PasswordEntry" Placeholder="Введите ваш пароль"/>
 
-                    <Grid ColumnDefinitions="*, 40">
-                        <Entry x:Name="PasswordEntry" Placeholder="Введите ваш пароль">
-                            <Entry.Triggers>
-                                <DataTrigger TargetType="Entry" Binding="{Binding Source={x:Reference PasswordCheckBox}, 
-                                                                                                              Path=IsChecked}" Value="True">
-                                    <Setter Property="IsPassword" Value="True"/>
-                                </DataTrigger>
-                            </Entry.Triggers>
-                        </Entry>
-
-                        <CheckBox x:Name="PasswordCheckBox"
-                                  Grid.Column="1"
-                                  Color="BlueViolet"/>
-                    </Grid>
 
                     <HorizontalStackLayout>
                         <Grid ColumnDefinitions="5*, 5*">
