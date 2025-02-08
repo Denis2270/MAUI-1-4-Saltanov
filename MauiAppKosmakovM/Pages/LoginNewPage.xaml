@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppSaltanov.Pages.LoginNewPage"
+             Title="LoginNewPage"
+             Shell.NavBarIsVisible="False">
+    <ScrollView>
+        <Grid RowDefinitions="4*, 6*" Padding="30, 0">
+            <Image Source="dotnet_bot.png"/>
+
+            <VerticalStackLayout Grid.Row="1"
+                                 VerticalOptions="Center" 
+                                 Spacing="35"
+                                 Padding="0, 00, 0, 50">
+
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Добро пожаловать"
+                       FontSize="22"
+                       FontAttributes="Bold"/>
+
+                    <Label Text="Увеличь силу разума. Соедини свой разум."
+                       FontSize="13"
+                       TextColor="Gray"/>
+                </VerticalStackLayout>
+
+
+                <VerticalStackLayout Spacing="15">
+
+                    <VerticalStackLayout>
+                        <Label Text="Почта"
+                               FontSize="17"
+                               FontAttributes="Bold"/>
+                        
+                        <Frame Padding="15,7">
+                            <Entry Placeholder="Введите вашу почту (example@mail.com)"/>
+                        </Frame>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Label Text="Пароль"
+                               FontSize="17"
+                               FontAttributes="Bold"/>
+
+                        <Frame Padding="15,7">
+                            <Entry x:Name="PasswordEntry" Placeholder="Введите ваш пароль"/>
+                        </Frame>
+
+                        <Label Text="Восстановить пароль"
+                               TextColor="Blue"
+                               FontSize="12"
+                               FontAttributes="Bold"
+                               HorizontalOptions="End"/>
+                    </VerticalStackLayout>
+                    
+                </VerticalStackLayout>
+
+                <Button Text="Войти"
+                        BackgroundColor="Black"
+                        FontAttributes="Bold"/>
+
+                <HorizontalStackLayout HorizontalOptions="Center"
+                                       Spacing="7">
+                    <Label Text="Новенький у нас?"/>
+                    
+                    <Label Text="Зарегистрироваться"
+                           TextColor="Blue"/>
+                </HorizontalStackLayout>
+
+
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

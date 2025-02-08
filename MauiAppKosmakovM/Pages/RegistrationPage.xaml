@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppSaltanov.Pages.RegistrationPage"
+             Title="Зарегистрироваться">
+    <ScrollView VerticalOptions="Center">
+        <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+
+            <Label Style="{StaticResource LabelStyle1}"
+                   Text="Регистрация"/>
+
+            <Frame Style="{StaticResource FrameStyle1}">
+                <Entry x:Name="NameTb" Placeholder="Имя пользователя" />
+            </Frame>
+
+            <Frame Style="{StaticResource FrameStyle1}">
+                <Entry x:Name="PasswordTb" Placeholder="Пароль" IsPassword="True" />
+            </Frame>
+
+            <Frame Style="{StaticResource FrameStyle1}">
+                <Entry x:Name="RepeatPasswordTb" Placeholder="Повторите пароль" IsPassword="True" />
+            </Frame>
+
+            <Button Style="{StaticResource ButtonStyle1}"
+                    Text="Зарегистрироваться" 
+                    SemanticProperties.Hint="Log in"
+                    HorizontalOptions="Fill" 
+                    Clicked="RegistrationClicked"/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

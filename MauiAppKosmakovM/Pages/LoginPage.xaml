@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppSaltanov.Pages.LoginPage">
+
+    <ScrollView>
+        <Grid RowDefinitions="4*, 6*" Padding="0, 0">
+            <Image Source="dotnet_bot.png"/>
+            <VerticalStackLayout Padding="30,0"
+                                 Spacing="50"
+                                 Grid.Row="1"
+                                 VerticalOptions="Start">
+
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label Text="Войти в "
+                       Style="{StaticResource LabelStyle1}" />
+
+                    <Label Text="Sync"
+                           Style="{StaticResource LabelStyle1}"
+                           TextColor="BlueViolet"
+                           Opacity="0.7"/>
+                </HorizontalStackLayout>
+
+
+                <VerticalStackLayout>
+                    <Entry x:Name="NameTb" Placeholder="Имя пользователя" />
+
+
+                    <Grid ColumnDefinitions="*, 40">
+                        <Entry x:Name="PasswordEntry" Placeholder="Введите ваш пароль">
+                            <Entry.Triggers>
+                                <DataTrigger TargetType="Entry" Binding="{Binding Source={x:Reference PasswordCheckBox}, 
+                                                                                                              Path=IsChecked}" Value="True">
+                                    <Setter Property="IsPassword" Value="True"/>
+                                </DataTrigger>
+                            </Entry.Triggers>
+                        </Entry>
+
+                        <CheckBox x:Name="PasswordCheckBox"
+                                  Grid.Column="1"
+                                  Color="BlueViolet"/>
+                    </Grid>
+
+                    <HorizontalStackLayout>
+                        <Grid ColumnDefinitions="5*, 5*">
+                            <HorizontalStackLayout Grid.Column="0">
+                                <CheckBox Scale="0.7" />
+
+                                <Label Text="Запомни меня"
+                                       FontSize="13"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalOptions="Start"/>
+
+                            </HorizontalStackLayout>
+
+                            <Label Text="Забыли пароль?"
+                                   FontSize="13"
+                                   TextColor="Blue"
+                                   TextDecorations="Underline"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalOptions="End"
+                                   Grid.Column="1">
+                            </Label>
+                        </Grid>
+
+                    </HorizontalStackLayout>
+
+                </VerticalStackLayout>
+
+
+                <Button Style="{StaticResource ButtonStyle1}"
+                        Text="Войти" 
+                        SemanticProperties.Hint="Sign up"
+                        Clicked="SignUpClicked"
+                        HorizontalOptions="Fill" 
+                        Opacity="0.7"/>
+
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label Text="Ещё не с нами?"
+                           FontSize="13"
+                           Padding="0, 0, 10, 0"/>
+
+                    <Label Text="Регистрация"
+                           FontSize="13" 
+                           TextColor="Blue"
+                           TextDecorations="Underline">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GoToRegistrationPage"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
